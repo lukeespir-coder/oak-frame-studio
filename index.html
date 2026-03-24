@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oak Frame Studio | Bespoke Handcrafted Oak Frames for Homes &amp; Gardens</title>
+    <meta name="description" content="Oak Frame Studio designs and builds bespoke handmade oak porches, pergolas, garden structures and exterior features. Traditional craftsmanship, timeless design, built to last generations.">
+    <meta name="keywords" content="oak frame, bespoke oak structures, oak porch, oak pergola, garden structures, handmade oak, oak framing, oak garage, oak shed, timber frame">
+    <meta name="author" content="Oak Frame Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.oakframestudio.co.uk/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Oak Frame Studio | Bespoke Handcrafted Oak Frames">
+    <meta property="og:description" content="Timeless handmade oak structures designed for your home. Porches, pergolas, garages and garden features built with traditional craftsmanship.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.oakframestudio.co.uk/">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="GB">
+    <meta name="geo.placename" content="United Kingdom">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Oak Frame Studio",
+        "description": "Bespoke handmade oak structures for homes and gardens. Porches, pergolas, garages and garden features designed with traditional craftsmanship.",
+        "url": "https://www.oakframestudio.co.uk",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "sameAs": [],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Oak Frame Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Bespoke Oak Porches"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Garden Structures"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Oak Pergolas"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Oak Garages and Sheds"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --oak-dark: #2C1810;
+            --oak-medium: #8B6914;
+            --oak-light: #C4A265;
+            --oak-cream: #F5F0E8;
+            --oak-warm: #D4A853;
+            --charcoal: #1a1a1a;
+            --off-white: #FAFAF7;
+            --text-dark: #2d2d2d;
+            --text-mid: #555;
+            --text-light: #777;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--off-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 4rem;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .nav-brand span {
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--oak-warm);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover { color: white; }
+        .nav-links a:hover::after { width: 100%; }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background: var(--charcoal);
+        }
+
+        .hero-slideshow {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(20,15,10,0.3) 0%,
+                rgba(20,15,10,0.15) 40%,
+                rgba(20,15,10,0.5) 75%,
+                rgba(20,15,10,0.85) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem 5rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: end;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+            color: white;
+            font-weight: 400;
+            margin-bottom: 0;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--oak-warm);
+        }
+
+        .hero-dots {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .hero-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 0;
+        }
+
+        .hero-dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        .hero-right p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1.1rem 3rem;
+            background: var(--off-white);
+            color: var(--charcoal);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--oak-warm);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212,168,83,0.3);
+        }
+
+        .btn-dark {
+            background: var(--charcoal);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--oak-dark);
+            color: white;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--charcoal);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            border: 1.5px solid var(--charcoal);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: var(--charcoal);
+            color: white;
+        }
+
+        /* ===== SECTION SHARED ===== */
+        section {
+            padding: 8rem 4rem;
+        }
+
+        .section-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* ===== INTRO / ABOUT ===== */
+        .intro {
+            background: var(--off-white);
+        }
+
+        .intro .section-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .intro-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro-logo img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .intro h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 2rem;
+            color: var(--charcoal);
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            margin-bottom: 1.2rem;
+            max-width: 560px;
+        }
+
+        /* ===== WHAT WE CREATE ===== */
+        .services {
+            background: white;
+        }
+
+        .services-header {
+            margin-bottom: 5rem;
+        }
+
+        .services-header h2 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+
+        .services-header p {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            max-width: 700px;
+        }
+
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+            padding-bottom: 6rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-card:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .service-card.reversed {
+            direction: rtl;
+        }
+
+        .service-card.reversed > * {
+            direction: ltr;
+        }
+
+        .service-text h3 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+
+        .service-text p {
+            font-size: 1rem;
+            color: var(--text-mid);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .service-image {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            position: relative;
+            background: #e8e4dc;
+        }
+
+        /* ===== ABOUT US ===== */
+        .about {
+            background: var(--off-white);
+        }
+
+        .about .section-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #e8e4dc;
+        }
+
+        .about h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 2rem;
+            color: var(--charcoal);
+        }
+
+        .about p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            max-width: 540px;
+        }
+
+        .about .btn-dark {
+            margin-top: 1.5rem;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            background: white;
+            padding: 6rem 4rem;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .gallery-header h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-header p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background: #e8e4dc;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* ===== TESTIMONIAL ===== */
+        .testimonial {
+            background: var(--charcoal);
+            text-align: center;
+        }
+
+        .testimonial blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            color: white;
+            font-style: italic;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .testimonial cite {
+            color: var(--oak-warm);
+            font-style: normal;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        /* ===== CONTACT / CTA ===== */
+        .cta {
+            background: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.6);
+            padding: 4rem;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== LOADING SHIMMER ===== */
+        .img-loading {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-loading::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 1.5s infinite;
+            z-index: 1;
+        }
+
+        .img-loading.loaded::before {
+            display: none;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            section { padding: 5rem 2rem; }
+            nav { padding: 1.2rem 2rem; }
+            nav.scrolled { padding: 0.8rem 2rem; }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                padding: 0 2rem;
+                gap: 2rem;
+            }
+
+            .intro .section-inner,
+            .about .section-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .service-card,
+            .service-card.reversed {
+                grid-template-columns: 1fr;
+                direction: ltr;
+                gap: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(26,26,26,0.98);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+
+            .hero h1 { font-size: 2.4rem; }
+            section { padding: 4rem 1.5rem; }
+            .gallery { padding: 4rem 1.5rem; }
+            footer { padding: 3rem 1.5rem; }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="mainNav" aria-label="Main navigation">
+    <a href="#" class="nav-brand">Oak Frame Studio <span>| Bespoke Oak Frames for Homes &amp; Gardens</span></a>
+    <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="hero-slideshow">
+        <div class="hero-slide active">
+            <img src="canva-1.jpg" alt="Oak pergola with climbing roses on English brick cottage at golden hour" loading="eager">
+        </div>
+        <div class="hero-slide">
+            <img src="canva-2.jpg" alt="Oak porch with curved braces and wisteria on brick house" loading="eager">
+        </div>
+        <div class="hero-slide">
+            <img src="canva-3.jpg" alt="Freestanding oak pergola with outdoor dining in landscaped garden" loading="eager">
+        </div>
+        <div class="hero-slide">
+            <img src="canva-4.jpg" alt="Craftsman fitting mortise and tenon oak joint" loading="eager">
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-left">
+            <h1>Timeless Handcrafted <em>Oak</em> Structures Designed for Your Home</h1>
+        </div>
+        <div class="hero-right">
+            <p>We design and build bespoke oak porches, elegant garden structures and practical exterior features that bring enduring character, seamless function and lasting value to your property.</p>
+            <a href="#contact" class="btn-primary">Request a Quote</a>
+        </div>
+    </div>
+    <div class="hero-dots">
+        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+    </div>
+</section>
+
+<!-- ===== BESPOKE BY DESIGN ===== -->
+<section class="intro" id="intro">
+    <div class="section-inner">
+        <div class="intro-logo fade-in img-loading">
+            <img src="canva-4.jpg" alt="Craftsman hand fitting oak mortise and tenon joint with wood shavings" loading="lazy" onload="this.parentElement.classList.add('loaded')">
+        </div>
+        <div class="intro-text fade-in">
+            <h2>Bespoke by Design.<br>Built to Last.</h2>
+            <p>At Oak Frame Studio, we create handmade oak structures meticulously designed to complement individual homes, gardens and outdoor spaces. From entrance porches and framed shelters to fully tailored commissions, every project is shaped around the property, its purpose and the vision our clients want to realise.</p>
+            <p>We believe exceptional oak framing should feel natural to its setting. It should be well proportioned, practical, beautifully made and built to endure the test of time. That is why we focus on thoughtful design, honest advice and proper craftsmanship from the very start.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHAT WE CREATE ===== -->
+<section class="services" id="services">
+    <div class="section-inner">
+        <div class="services-header fade-in">
+            <h2>What We Create.</h2>
+            <p>Each project begins with the space itself, then develops through considered design, precise proportion and careful execution to deliver something that truly belongs.</p>
+        </div>
+
+        <!-- Oak Porches -->
+        <article class="service-card fade-in">
+            <div class="service-text">
+                <h3>Oak Porches</h3>
+                <p>A handcrafted oak porch elevates both the appearance and function of a home's entrance. It provides welcoming shelter from the elements, creates a more inviting approach and adds lasting character to the property. Whether you prefer something simple and understated or richly detailed and distinctive, the right design can be shaped around different architectural styles, spaces and budgets, while still feeling in harmony with the home, working beautifully in everyday use and adding genuine long term value.</p>
+                <a href="#contact" class="btn-outline">Learn More</a>
+            </div>
+            <div class="service-image img-loading">
+                <img src="canva-2.jpg" alt="Bespoke oak frame porch with curved braces and wisteria on brick house" loading="lazy" onload="this.parentElement.classList.add('loaded')" style="object-position: top center;">
+            </div>
+        </article>
+
+        <!-- Garden Structures -->
+        <article class="service-card reversed fade-in">
+            <div class="service-text">
+                <h3>Garden Structures: Pergolas, Garages &amp; Sheds</h3>
+                <p>Oak framed garden structures bring shape, purpose and visual appeal to an outdoor space, while making it more usable throughout the year. Whether simple and understated or more detailed and striking, oak framed designs can be tailored to suit different gardens, styles and budgets, creating features that feel both practical and beautifully in keeping with their surroundings. From potting sheds to outdoor dining spaces, oak framing offers an elegant and enduring way to create features that are both useful and built to last.</p>
+                <a href="#contact" class="btn-outline">Learn More</a>
+            </div>
+            <div class="service-image img-loading">
+                <img src="canva-3.jpg" alt="Freestanding oak pergola with outdoor dining area in landscaped garden" loading="lazy" onload="this.parentElement.classList.add('loaded')">
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+    <div class="gallery-header fade-in">
+        <h2>Our Craftsmanship</h2>
+        <p>A selection of bespoke oak structures we have designed and built for homes and gardens across the United Kingdom.</p>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item img-loading fade-in">
+            <img src="canva-1.jpg" alt="Oak pergola with roses on English brick cottage" loading="lazy" onload="this.parentElement.classList.add('loaded')">
+        </div>
+        <div class="gallery-item img-loading fade-in">
+            <img src="canva-2.jpg" alt="Oak porch with curved braces, wisteria and brick pillars" loading="lazy" onload="this.parentElement.classList.add('loaded')">
+        </div>
+        <div class="gallery-item img-loading fade-in">
+            <img src="canva-3.jpg" alt="Freestanding oak pergola with outdoor dining setting" loading="lazy" onload="this.parentElement.classList.add('loaded')">
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIAL ===== -->
+<section class="testimonial">
+    <div class="section-inner fade-in">
+        <blockquote>"The porch has completely transformed the front of our house. Everyone who visits comments on how beautiful it looks. The craftsmanship is outstanding."</blockquote>
+        <cite>Satisfied Homeowner, Surrey</cite>
+    </div>
+</section>
+
+<!-- ===== ABOUT US ===== -->
+<section class="about" id="about">
+    <div class="section-inner">
+        <div class="about-image img-loading fade-in">
+            <img src="canva-2.jpg" alt="Oak frame porch entrance with wisteria and traditional brick detailing" loading="lazy" onload="this.parentElement.classList.add('loaded')">
+        </div>
+        <div class="about-text fade-in">
+            <h2>About Us | Oak Frame Studio</h2>
+            <p>Oak Frame Studio creates handmade oak structures for private clients, designers and building professionals. From entrance porches and garden features to practical exterior builds and bespoke commissions, our work combines thoughtful design, traditional craftsmanship and a straightforward approach.</p>
+            <p>The result is oak framing that feels considered, functions beautifully and sits naturally within its setting. Every joint is made to last, every structure is designed to enhance the space it occupies.</p>
+            <a href="#contact" class="btn-dark btn-primary">Start Your Enquiry</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT CTA ===== -->
+<section class="cta" id="contact">
+    <div class="section-inner fade-in">
+        <h2>Ready to Begin Your Project?</h2>
+        <p>Whether you have a clear vision or just an idea, we would love to hear about your project. Get in touch for a free initial consultation and let us help you create something lasting.</p>
+        <a href="mailto:info@oakframestudio.co.uk" class="btn-primary btn-dark">Get in Touch</a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">Oak Frame Studio</div>
+        <p>&copy; 2026 Oak Frame Studio. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    // Scroll nav background
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hero slideshow
+    (function() {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        let current = 0;
+        let interval;
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = index;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        function next() {
+            goTo((current + 1) % slides.length);
+        }
+
+        function startAuto() {
+            interval = setInterval(next, 5000);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(interval);
+                goTo(parseInt(dot.dataset.slide));
+                startAuto();
+            });
+        });
+
+        startAuto();
+    })();
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.querySelector('.nav-links')?.classList.remove('open');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
