@@ -214,34 +214,17 @@
             background: var(--charcoal);
         }
 
-        .hero-slideshow {
+        .hero-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
         }
 
-        .hero-slide {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        .hero-slide img {
+        .hero-bg img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             object-position: center;
-            /* Scale up slightly so image fills more width, minimal crop */
-            transform: scale(1.35);
-            transform-origin: center 40%;
         }
 
         .hero-overlay {
@@ -284,31 +267,6 @@
             color: var(--oak-warm);
         }
 
-        .hero-dots {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 3;
-            display: flex;
-            gap: 0.6rem;
-        }
-
-        .hero-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.4);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            padding: 0;
-        }
-
-        .hero-dot.active {
-            background: white;
-            transform: scale(1.3);
-        }
 
         .hero-right p {
             color: rgba(255,255,255,0.85);
@@ -764,22 +722,8 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
-    <div class="hero-slideshow">
-        <div class="hero-slide active">
-            <img src="Garage_Canva.png" alt="Oak framed cart lodge garage with three open bays at golden hour" loading="eager">
-        </div>
-        <div class="hero-slide">
-            <img src="canva-1.jpg" alt="Oak pergola with climbing roses on brick cottage at golden hour" loading="eager">
-        </div>
-        <div class="hero-slide">
-            <img src="Garden%20room_Canva.png" alt="Oak framed garden room orangery with full height glazing" loading="eager">
-        </div>
-        <div class="hero-slide">
-            <img src="Oak%20Timber_Canva.png" alt="Oak gable with exposed truss and glass bifold doors" loading="eager">
-        </div>
-        <div class="hero-slide">
-            <img src="OakTimber_Canva2.png" alt="Oak framed extension with bifold doors opening to garden" loading="eager">
-        </div>
+    <div class="hero-bg">
+        <img src="canva-1.jpg" alt="Oak pergola with climbing roses on English brick cottage at golden hour" loading="eager">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -790,13 +734,6 @@
             <p>We design and build bespoke oak porches, elegant garden structures and practical exterior features that bring enduring character, seamless function and lasting value to your property.</p>
             <a href="#contact" class="btn-primary">Request a Quote</a>
         </div>
-    </div>
-    <div class="hero-dots">
-        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
-        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
-        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
-        <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
-        <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
     </div>
 </section>
 
@@ -927,40 +864,6 @@
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 50);
     });
-
-    // Hero slideshow
-    (function() {
-        const slides = document.querySelectorAll('.hero-slide');
-        const dots = document.querySelectorAll('.hero-dot');
-        let current = 0;
-        let interval;
-
-        function goTo(index) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = index;
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-
-        function next() {
-            goTo((current + 1) % slides.length);
-        }
-
-        function startAuto() {
-            interval = setInterval(next, 5000);
-        }
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                clearInterval(interval);
-                goTo(parseInt(dot.dataset.slide));
-                startAuto();
-            });
-        });
-
-        startAuto();
-    })();
 
     // Fade in on scroll
     const observer = new IntersectionObserver((entries) => {
