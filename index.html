@@ -235,7 +235,16 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center;
+            object-position: center;
+        }
+
+        @media (min-aspect-ratio: 1/1) {
+            /* Landscape screens: limit hero height so square images aren't cropped */
+            .hero {
+                min-height: auto;
+                height: 100vw;
+                max-height: 100vh;
+            }
         }
 
         .hero-overlay {
